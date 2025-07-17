@@ -1,5 +1,5 @@
 const pool = require('../config/db');
-const stripe = require('stripe')('sk_test_51RjOurPNL4dWw6nE4hhWKu5I6aQ8m9s53cgcdhaPSvlaMYMkFjExrj48ThKPPjVI47E5aTbMl9kNGvq0798b4aYs00g3WWLkfv');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const PaymentController = {
   // PAGO CON TARJETA (Stripe)
